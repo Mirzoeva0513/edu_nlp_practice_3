@@ -1,20 +1,36 @@
 # -*- coding: utf-8 -*-
 """
-Для каждого регулярного выражения, которое требуется написать,
-указана строка, в которой нужно выполнить замену, а следом
-после стрелки (--->) указан результат замены.
+Для каждого набора входных и выходных строк требуется написать два выражения:
+регулярное выражение для поиска и строку замены, при применении которых строка
+ввода преобразуется в строку вывода.
 
 Задача была взята из курса http://cs.mipt.ru/advanced_python/lessons/lab12.html
+
+Для корректной работы автоматических тестов не переименовывайте переменные
+PATTERN_1, ..., PATTERN_4, REPL_1, ... REPL_4!
 """
 
-import re
+
+# Пример:
+
+
+# ввод       вывод
+# a b c ---> a bb c
+# b b a ---> bb bb a
+# a c a ---> a c a
+_PATTERN_0 = r"(b)"  # строка поиска
+_REPL_0 = r"\1\1"  # строка замены
+
+
+# Ваше решение:
 
 
 # aAc   ---> a!A!c
 # aZc   ---> a!Z!c
 # aZZc  ---> a!Z!!Z!c
 # aBaCa ---> a!B!a!C!a
-REGEXP_1 = "", ""
+PATTERN_1 = ""
+REPL_1 = ""
 
 
 # abc    ---> abc
@@ -22,7 +38,8 @@ REGEXP_1 = "", ""
 # azzzc  ---> azc
 # arrrrc ---> arc
 # xxxxxx ---> x
-REGEXP_2 = "", ""
+PATTERN_2 = ""
+REPL_2 = ""
 
 
 # this is text         ---> this is text
@@ -30,16 +47,11 @@ REGEXP_2 = "", ""
 # this is is is text   ---> this *is* text
 # this is text text    ---> this is *text*
 # this is is text text ---> this *is* *text*
-REGEXP_3 = "", ""
+PATTERN_3 = ""
+REPL_3 = ""
 
 # one two three ---> two one three
 # dog cat wolf  ---> cat dog wolf
 # goose car rat ---> goose rat car
-REGEXP_4 = "", ""
-
-
-# cat dog                     ---> cat dog
-# cat dog cat                 ---> cat dog cat
-# dog cat dog cat cat         ---> dog dog
-# dog cat dog rat rat cat cat ---> dog dog rat rat
-REGEXP_5 = "", ""
+PATTERN_4 = ""
+REPL_4 = ""
