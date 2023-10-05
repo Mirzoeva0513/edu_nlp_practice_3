@@ -8,7 +8,7 @@ TestCase = tuple[PatternAndReplacement, list[InputAndOutput]]
 
 tests: list[TestCase] = [
     (
-        task_4.REGEXP_1,
+        (task_4.PATTERN_1, task_4.REPL_1),
         [
             ("aAc", "a!A!c"),
             ("aZc", "a!Z!c"),
@@ -17,7 +17,7 @@ tests: list[TestCase] = [
         ],
     ),
     (
-        task_4.REGEXP_2,
+        (task_4.PATTERN_2, task_4.REPL_2),
         [
             ("abc", "abc"),
             ("abbc", "abc"),
@@ -27,7 +27,7 @@ tests: list[TestCase] = [
         ],
     ),
     (
-        task_4.REGEXP_3,
+        (task_4.PATTERN_3, task_4.REPL_3),
         [
             ("this is text", "this is text"),
             ("this is is text", "this *is* text"),
@@ -37,22 +37,13 @@ tests: list[TestCase] = [
         ],
     ),
     (
-        task_4.REGEXP_4,
+        (task_4.PATTERN_4, task_4.REPL_4),
         [
             ("one two three", "two one three"),
             ("dog cat wolf", "cat dog wolf"),
             ("goose car rat", "goose rat car"),
         ],
     ),
-    # (
-    #     task_4.REGEXP_5,
-    #     [
-    #         ("cat dog", "cat dog"),
-    #         ("cat dog cat", "cat dog cat"),
-    #         ("dog cat dog cat cat", "dog dog"),
-    #         ("dog cat dog rat rat cat cat", "dog dog rat rat"),
-    #     ],
-    # ),
 ]
 
 
